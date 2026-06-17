@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tetris
+  name space: dev
 spec:
   replicas: 3
   selector:
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tetris
-        image: shaikmustafa/anath:v1
+        image: shaikmustafa/mytetrisgame:v3
         ports:
         - containerPort: 3000   # Use port 3000
 
